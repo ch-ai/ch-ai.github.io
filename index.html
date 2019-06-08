@@ -1,14 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="stylesheet" href="styles.css" type="text/css" media="screen, projection" />
+  <title>Chai</title>
 </head>
-<body>
 
-  test 
-  
+<body onload="onDocumentLoaded()">
+  <he-ad class="head">
+  </he-ad>
+  <con-tea-nt class="content">
+    <left-con-tea-nt class="left-content">
+      <left-west class="left-west"></left-west>
+      <left-east class="left-east">
+        <dashboard-header class="dashboard-header"></dashboard-header>
+        <dash-board class="dashboard">
+          <bar-chart class="bar-chart" id="bar-chart"></bar-chart>
+          <bub-ble class="bubble" id="bubble"></bub-ble>
+          <t-able class="table" id="table"></t-able>
+        </dash-board>
+      </left-east>
+    </left-con-tea-nt>
+
+    <right-con-tea-nt class="right-content">
+      <ch-ai class="chai">
+        <counter-title class="counter-title"><b>Chai</b></counter-title>
+        <span class="chai-counter-day">
+          <hr>
+          <span class="counter-text">Today : </span>
+          <span class="chai-count" id="chai-count"></span>
+          <span class="chai-plus">
+            <button class="button" onclick="changeCount('chai')">+</button>
+          </span>
+          <span class="undo" title="undo"><button onclick="undo()" id="undo-chai"
+              disabled="true">&#8630;</button></span>
+        </span>
+        <span class="chai-counter-all">
+          <span class="counter-text">All Time : </span>
+          <span class="chai-counter-all" id="chai-count-all"> </span>
+        </span>
+      </ch-ai>
+
+      <cof-fee class="coffee">
+        <counter-title class="counter-title"><b>Coffee</b></counter-title>
+        <span class="coffee-counter-day">
+          <hr>
+          <span class="counter-text">Today : </span>
+          <span class="coffee-count" id="coffee-count"></span>
+          <span class="coffee-plus">
+            <button class="button" onclick="changeCount('coffee')">+</button>
+          </span>
+          <span class="undo" title="undo"><button onclick="undo()" id="undo-coffee"
+              disabled="true">&#8630;</button></span>
+        </span>
+        <span class="coffee-counter-all">
+          <span class="counter-text">All Time : </span>
+          <span class="coffee-counter-all" id="coffee-count-all"></span>
+        </span>
+      </cof-fee>
+    </right-con-tea-nt>
+  </con-tea-nt>
+
+  <script src="script.js"></script>
+  <script src="components.js"></script>
+
 </body>
+
 </html>
