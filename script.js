@@ -1,6 +1,5 @@
 
 let onDocumentLoaded = () => {
-
   checkStartOfDay();
   refreshCounts();
   consoleLog();
@@ -23,12 +22,12 @@ let checkStartOfDay = () => {
   refreshCounts();
 }
 
-let changeCount = (breverage) => {
+let changeCount = (beverage) => {
   checkStartOfDay();
   let data = getStoredData();
-  let doubleClicked = checkDoubleClick(breverage);
+  let doubleClicked = checkDoubleClick(beverage);
 
-  if (breverage === 'chai') {
+  if (beverage === 'chai') {
     data.chaiCount += 1;
     data.totalChaiCount += 1;
     enableUndo('chai');
@@ -39,7 +38,7 @@ let changeCount = (breverage) => {
   }
 
   let entryData = {
-    b: breverage === 'chai' ? 1 : 2,
+    b: beverage === 'chai' ? 1 : 2,
     t: Date.now()
   }
 
@@ -106,7 +105,7 @@ let storeData = (data) => {
   localStorage.setItem('data', JSON.stringify(data));
 }
 
-let checkDoubleClick = (breverage) => {
+let checkDoubleClick = (beverage) => {
   return false
 }
 
