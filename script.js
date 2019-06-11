@@ -60,11 +60,13 @@ let refreshCounts = () => {
 
 let enableUndo = (type) => {
   if (type === 'chai') {
+    document.getElementById('undo-coffee').disabled = true;
     document.getElementById('undo-chai').disabled = false;
     setTimeout(() => {
       document.getElementById('undo-chai').disabled = true;
     }, 10000)
   } else {
+    document.getElementById('undo-chai').disabled = true;
     document.getElementById('undo-coffee').disabled = false;
     setTimeout(() => {
       document.getElementById('undo-coffee').disabled = true;
