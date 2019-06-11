@@ -95,3 +95,23 @@ button {
   -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.45);
   box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.45);
 }
+
+@media screen and (max-width: 575px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10;
+    font-size: small;
+  }
+
+  .head {
+    flex-grow: 1;
+    background-size: auto;
+  }
+}
