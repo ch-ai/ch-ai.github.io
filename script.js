@@ -48,12 +48,26 @@ let changeCount = (beverage) => {
   refreshCounts();
 }
 
+let changeUdhari = (param) => {
+  let data = getStoredData();
+  if (param === '10plus') {
+    data.udhariCount += 10;
+  } else if (param === '15plus') {
+    data.udhariCount += 15;
+  } else if (param === 'clear') {
+    data.udhariCount = 0;
+  }
+  storeData(data);
+  refreshCounts();
+}
+
 let refreshCounts = () => {
   let data = getStoredData();
   if (data) {
     document.getElementById("chai-count").innerHTML = data.chaiCount;
     document.getElementById("chai-count-all").innerHTML = data.totalChaiCount;
     document.getElementById("coffee-count").innerHTML = data.coffeeCount;
+    document.getElementById("udhari-count").innerHTML = data.udhariCount;
     document.getElementById("coffee-count-all").innerHTML = data.totalCoffeeCount;
   }
 }
@@ -97,6 +111,7 @@ let setData = () => {
     coffeeCount: 0,
     totalChaiCount: 0,
     totalCoffeeCount: 0,
+    udhariCount: 0,
     allChanges: [],
     lastChange: {}
   }
@@ -133,8 +148,8 @@ let undo = () => {
 }
 
 let consoleLog = () => {
-  console.log(`%c This is a simple webpage and basically does nothing.`,'color: red; font-size: 150%');
-  console.log(`%c Have added some basic counters to track daily tea/coffee intake. Will add some visualizations in the future.`,'color: blue; font-size: 120%');
-  console.log(`%c Data will be saved in browser's localstorage.  `,'color: green; font-size: 120%');
-  console.log(`%c Contact me @ ch4iw4l4@gmail.com`,'color: grey; font-size: 130%');
+  console.log(`%c This is a simple webpage and basically does nothing.`, 'color: red; font-size: 150%');
+  console.log(`%c Have added some basic counters to track daily tea/coffee intake. Will add some visualizations in the future.`, 'color: blue; font-size: 120%');
+  console.log(`%c Data will be saved in browser's localstorage.  `, 'color: green; font-size: 120%');
+  console.log(`%c Contact me @ ch4iw4l4@gmail.com`, 'color: grey; font-size: 130%');
 }

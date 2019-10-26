@@ -8,6 +8,14 @@ class ChAi extends HTMLElement {
 
 window.customElements.define('ch-ai', ChAi);
 
+class UdhaRi extends HTMLElement {
+  constructor() {
+    super();
+  }
+}
+
+window.customElements.define('udha-ri', UdhaRi);
+
 class CofFee extends HTMLElement {
   constructor() {
     super();

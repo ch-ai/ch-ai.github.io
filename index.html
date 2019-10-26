@@ -26,6 +26,34 @@
     </left-con-tea-nt>
 
     <right-con-tea-nt class="right-content">
+      <udha-ri class="udhari">
+
+        <counter-title class="counter-title"><b>Udhari: <span class="udhari-count" id="udhari-count"></span> ₹</b>
+          <span class="chai-plus">
+            <button class="button" onclick="changeUdhari('clear')"><b>Clear</b></button>
+          </span>
+        </counter-title>
+        <span class="udhari-counter-day">
+          <hr>
+          <!-- <span class="counter-text">Today : </span> -->
+          <span class="chai-plus">
+            <button class="button" onclick="changeUdhari('10plus')">+ ₹10</button>
+          </span>
+          <span class="chai-plus">
+            <button class="button" onclick="changeUdhari('15plus')">+ ₹15</button>
+          </span>
+          <span class="undo" title="undo"><button onclick="changeUdhari('undo')" id="undo-udhari"
+              disabled="true">&#8630;</button></span>
+        </span>
+
+
+
+        <!-- <span class="chai-counter-all">
+          <span class="counter-text">All Time : </span>
+          <span class="chai-counter-all" id="chai-count-all"> </span>
+        </span> -->
+      </udha-ri>
+
       <ch-ai class="chai">
         <counter-title class="counter-title"><b>Chai</b></counter-title>
         <span class="chai-counter-day">
